@@ -1,0 +1,176 @@
+/*
+Theme Name: Theme Creation
+Theme URI: http://google.com
+Author: Bishan Ghosal
+Author URI: http://yahoo.com
+Description: This is a beautiful website inspired by the popular wordpress theme Spacious
+Tags: fun,energy,business,child,parent,food
+Version: 1.0.1439274768
+Updated: 2015-08-11 06:32:48
+*/
+
+*{
+     margin:0;
+     padding:0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 142px; 
+}
+.site-footer {
+  background:  #4fb5a9;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+.search {
+	float:right;
+}
+/* navigation*/
+.mainmenu{
+  background: #222;
+}
+
+.mainmenu ul{
+  padding: 0;
+  margin: 0;
+}
+.mainmenu ul li{
+  list-style: none;
+  display: inline-block; /* if we use float we can't use text-aling:center in the parent*/
+  margin-right: -4px;
+  display: inline-block;
+}
+
+.mainmenu ul li a:link,
+.mainmenu ul li a:visited{
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  color: #fff;
+}
+.mainmenu ul li:hover a{
+  background: #333;
+}
+.mainmenu .current_page_item > a,
+.mainmenu .current_page_ancestor > a,
+.mainmenu .current-menu-item > a,
+.mainmenu .current-menu-ancestor > a {
+  font-style: italic;
+}
+
+.mainmenu ul li.current-menu-item >a{
+ background: #deeae1;
+ color: #222;
+}
+.mainmenu ul li:has(> ul li.active){
+  font-style: italic;
+}
+.mainmenu ul ul{
+  display: none;
+  position: absolute;
+  background: #333;
+}
+.mainmenu ul li:hover ul{
+  display: block;
+}
+.mainmenu ul ul li{
+  display: block;
+}
+.mainmenu ul ul li:hover a{
+  background: #551a8b;
+}
+/* current-menu-item style has to be after hover style or else hover style will override*/
+.mainmenu ul ul li.current-menu-item >a{
+  background: #deeae1;
+  color: #222;
+}
+
+.site-title{
+     float:left;
+}
+
+.footer{
+     margin-bottom:0px;
+}
+
+.page-wrap, .inner-wrap{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.inner-wrap .page_container{
+  width:880px;
+  float: left;
+  background: green;
+  padding:10px;
+}
+.inner-wrap .sidebar{
+  width:290px;
+  float: left;
+  background:cyan;
+  padding:5px;
+}
+
+
+@media screen and (max-width: 1199px){
+  .page-wrap, .inner-wrap{
+    width:100%;
+  }
+
+  .inner-wrap .page_container{
+    width: 73%;
+    padding: 1%;
+
+  }
+
+  .inner-wrap .sidebar{
+    width: 24%;
+    padding:0.5%;
+  }
+}
+
+@media screen and (max-width:635px){
+  .inner-wrap .page_container{
+    width: 98%;
+    padding: 1%;
+
+  }
+
+  .inner-wrap .sidebar{
+    width: 99%;
+    padding:0.5%;
+  }
+
+}
+
+@media screen and (max-width:335px){
+
+  .page-wrap, .inner-wrap{
+    width:335px;
+  }
+
+ 
+}
